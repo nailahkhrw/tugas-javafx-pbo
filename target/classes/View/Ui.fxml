@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="697.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UiController">
+   <children>
+      <Button fx:id="btnSimpan" layoutX="41.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleSimpan" text="simpan" />
+      <Label layoutX="34.0" layoutY="19.0" text="Tanggal" />
+      <Label layoutX="34.0" layoutY="73.0" text="Durasi" />
+      <Label layoutX="335.0" layoutY="19.0" text="Jenis" />
+      <Label layoutX="341.0" layoutY="73.0" text="Catatan" />
+      <DatePicker fx:id="datePicker" layoutX="99.0" layoutY="19.0" />
+      <ComboBox fx:id="comboJenis" layoutX="405.0" layoutY="19.0" prefWidth="150.0" />
+      <TextField fx:id="fieldDurasi" layoutX="99.0" layoutY="69.0" />
+      <TextArea fx:id="areaCatatan" layoutX="397.0" layoutY="73.0" prefHeight="65.0" prefWidth="167.0" />
+      <TableView fx:id="tableView" layoutX="32.0" layoutY="168.0" prefHeight="200.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="colTanggal" prefWidth="75.0" text="tanggal" />
+          <TableColumn fx:id="colJenis" prefWidth="164.0" text="jenis olahraga" />
+            <TableColumn fx:id="colDurasi" prefWidth="75.0" text="Durasi" />
+            <TableColumn fx:id="colCatatan" prefWidth="75.0" text="Catatan" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnUpdate" layoutX="137.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleUpdate" text="edit" />
+      <Button fx:id="btnDelete" layoutX="209.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleDelete" text="hapus" />
+   </children>
+</AnchorPane>
